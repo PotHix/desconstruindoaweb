@@ -1,0 +1,47 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<html lang="pt-br" xmlns:og="http://ogp.me/ns#" itemscope itemtype="http://schema.org/Book">
+<head>
+  <meta charset="utf-8">
+
+  <!-- IE -->
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Desconstruindo a web</title>
+
+  <meta name="description" content="Desconstruindo a web - Conheça a fundo como funciona uma requisição web">
+
+  <!-- Nao suportamos IE6 ou IE7 -->
+  <!--[if lt IE 8]><script>location.href = 'ie.html';</script><![endif]-->
+
+  <!-- Fonte bacana do Google WebFonts -->
+  <link href='http://fonts.googleapis.com/css?family=Tienne' rel='stylesheet' type='text/css'>
+
+  <!-- Google+ -->
+  <meta itemprop="name" content="Desconstruindo a web - Conheça a fundo como funciona uma requisição web">
+  <meta itemprop="description" content="Livro que mostra do começo ao fim o que você deveria saber sobre o que acontece um uma requisição web">
+  <meta itemprop="image" content="<%= asset_url 'capa-livro-share.png' %>">
+
+  <!-- Mobile -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- HTML5 shiv for IE 8 -->
+  <!--[if IE 8]><script>OLD_IE=true;'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary time video'.replace(/\w+/g,function(n){document.createElement(n)})</script><![endif]-->
+
+  <!-- Aplica CSS sem media queries no IE8 -->
+  <!--[if IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+
+<!--[if lte IE 9]><body class="ie"><![endif]-->
+<!--[if !IE]><!--><body><!--<![endif]-->
+
+  <%= yield %>
+  <%= javascript_include_tag 'application' %>
+</body>
+</html>

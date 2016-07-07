@@ -15,7 +15,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module DesconstruindoAWebHotsite
+module DesconstruindoAWeb
   class Application < Rails::Application
     config.less.paths << File.join(Rails.root, 'app', 'assets', 'stylesheets', 'less')
 

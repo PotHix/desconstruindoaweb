@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :strict_transport_security
+  before_action :strict_transport_security
+
   def strict_transport_security
     if request.ssl?
       response.headers['Strict-Transport-Security'] = "max-age=31536000; includeSubDomains"

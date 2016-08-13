@@ -11,11 +11,13 @@
 
 <header>
   <div class="container">
-    <p id=chamada>Está na hora de entender a fundo o que acontece em uma requisição web</p>
+    <p id=chamada>Pronto para fazer uma viagem por cada tecnologia que
+    faz uma aplicação entregar conteúdo para um usuário na
+    internet?</p>
 
     <hgroup>
       <h1>Desconstruindo a web</h1>
-      <h2>Conheça a fundo como funciona uma requisição web</h2>
+      <h2>As tecnologias por trás de uma requisição</h2>
     </hgroup>
 
     <%= image_tag "capa-livro.png", alt: "Capa do livro" %>
@@ -27,43 +29,30 @@
     </div>
 
     <div class=compreja>
-      <a class="nicebutton" href="#">Comprar o livro</a>
+      <a class="nicebutton" href="https://casadocodigo.com.br">Comprar o livro</a>
     </div>
   </div>
 </header>
 
 <section id=descricao>
-  <div id=texto>
-    <p>No dia a dia do trabalho com desenvolvimento de software, especialmente
-desenvolvimento de aplicações para a internet, não é incomum se deparar com
-situações em que decisões equivocadas foram tomadas ou que discussões
-aconteceram apenas pela falta de uma melhor compreensão de como a internet
-realmente funciona, eu mesmo presenciei alguns desses casos. Em um determinado
-momento decidi que começaria a estudar o que realmente acontece quando uma URL é
-digitada no navegador e a tecla <i>enter</i> é pressionada. Separando cada parte de
-uma requisição para entender o que acontecia em cada um dos pedaços, percebi que
-existiam estudos sobre algumas dessas peças específicas (redes, protocolos,
-frameworks, servidores web) mas não existia nada que mostrasse, do começo ao
-fim, o que acontece enquanto eu estou em frente ao meu computador aguardando a
-barra de progresso encher por completo. E assim surgiu esse livro, o estudo de
-um desenvolvedor para entender o que realmente acontece entre o <i>enter</i> do
-teclado e a página totalmente carregada no seu computador.</p>
+  <div id=publico>
+    <h1>Sobre o livro</h1>
+    <p>Tudo começou com um estudo despretencioso sobre como uma requisição para um site funciona. A ideia era mostrar o máximo possível do que acontecia em uma requisição web, durante uma palestra de 50 minutos. Depois de 40 horas de estudo e dedicação, os slides da apresentação estavam prontos, mas havia muito mais detalhes nesse conteúdo do que era possível demonstrar nessa mídia e com esse tempo.</p>
+
+    <p>Durante a construção do material, foi possível perceber que há vários estudos isolados e documentos de arquitetura que mostram separadamente cada uma das peças de uma requisição web. É possível encontrar material sobre como as redes funcionam para entregar o conteúdo de um ponto ao outro, como os protocolos trabalham para encapsular os dados, como é a arquitetura de um framework de desenvolvimento web, como o servidor de aplicação se integra com o framework etc. Apesar disso, não há nada que mostre, do começo ao fim, o que acontece desde o momento que o usuário aperta a tecla Esnter do teclado até a página estar completamente carregada na tela.</p>
+    <p>Este livro vem cobrir esse espaço, trazendo um estudo unificado e focado no entendimento de como a internet funciona, utilizando uma requisição de uma página HTML como exemplo. Durante este estudo, vamos passar por diversas áreas de conhecimento distintas. Passaremos pela criação visual da interface no navegador, pela montagem dos pacotes dentro do kernel do sistema operacional, pelos dispositivos de rede da internet, e até mesmo pela integração do código da aplicação com o servidor web.</p>
   </div>
   <div id=publico>
-    <h1>Para quem é o livro</h1>
-    <p>Esse livro foi feito para quem tem uma visão superficial de como a internet
-funciona mas sabe que o navegador entende o que você digitou, envia para o
-sistema operacional, que por sua vez vai dar um jeito de enviar para a internet
-até o servidor de destino, processando a requisição e enviando de volta.</p>
+    <h1>Para quem é</h1>
+    <p>Desenvolvedores de aplicações para a internet, programadores curiosos com a web, administradores de sistema, engenheiros de rede, ou qualquer outra pessoa que crie conteúdo para a internet e esteja disposta ir fundo na tecnologia para entender o exato papel do seu trabalho no todo.</p>
 
-<p>O leitor deve saber o que é um protocolo de rede, saber qual o papel do sistema
-operacional e do servidor web, entender como funciona uma aplicação web e porque
-ela usaria um <i>framework</i>.</p>
+    <p>O estudo assume um conhecimento básico de como funciona o ambiente de desenvolvimento para a internet. Esse conhecimento básico significa saber que um desenvolvedor programou o site, possivelmente usou algum framework, colocou em um servidor de alguma empresa de hospedagem que possui Apache ou NGINX, e registrou o domínio para que seja fácil de acessar via internet.</p>
 
-<p>O livro possui conteúdo tanto para iniciantes, que apenas sabem da existencia de
-coisas como o Nginx, como para usuários mais avançados que querem <strong>entender como</strong>
-uma requisição vai chegar em uma aplicação web, passando pelo servidor web e o
-<i>framework</i>.</p>
+    <p>Apesar do livro explicar muitos dos termos, ele assume que quem está lendo já sabe o que significa sistema operacional, processo e thread, por exemplo. Esses e mais alguns outros termos básicos não serão detalhados para deixar a explicação mais direta, mas uma busca rápida na internet resolve o problema para continuar o entendimento. Familiaridade com alguma linguagem de programação também será útil em alguns pontos do estudo, em que vamos mais a fundo no desenvolvimento do software estudado.</p>
+
+    <p>Há informações úteis tanto para quem é menos experiente na área de internet como para quem já trabalha com isso há algum tempo. Um especialista em desenvolvimento de aplicações, por exemplo, encontrará algumas informações redundantes para a sua área de conhecimento. Apesar disso, ele conhecerá mais sobre todas as tecnologias que envolvem a entrega de conteúdo para o usuário.</p>
+
+    <p>O conteúdo deste livro foi pensado para que os especialistas possam passar rapidamente pelo conteúdo de sua especialidade, focando em todos os outros componentes da infraestrutura da requisição.</p>
     <p></p>
   </div>
 </section>
@@ -72,104 +61,108 @@ uma requisição vai chegar em uma aplicação web, passando pelo servidor web e
   <h1 class=container>Conteúdo</h1>
 
   <ol>
-    <li>Primeiro capítulo
+    <li>Capítulo 1 – E no começo, havia o navegador
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>O navegador de estudo</li>
+	<li>Entendendo o conteúdo da barra de endereços</li>
+	<li>Escolhendo o protocolo</li>
+	<li>O caminho até a rede no Chromium</li>
+	<li>O navegador possui cache dessa URL?</li>
+	<li>O navegador e a resolução de nomes</li>
       </ol>
     </li>
 
-    <li>Segundo capítulo
+    <li>Capítulo 2 – O sistema operacional e a resolução de nomes
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>Definindo o sistema operacional</li>
+	<li>A glibc e as chamadas de sistema</li>
+	<li>Como a função getaddrinfo resolve nomes</li>
+	<li>O protocolo IP e suas versões</li>
       </ol>
     </li>
 
-    <li>Terceiro capítulo
+    <li>Capítulo 3 – Resolução de nomes na rede
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>O modelo Ozzy</li>
+	<li>O protocolo DNS</li>
+	<li>DNS e o UDP</li>
+	<li>Os sockets</li>
+	<li>O que o DNS faz para obter o que precisa</li>
       </ol>
     </li>
 
-    <li>Quarto capítulo
+    <li>Capítulo 4 – Transferindo hypertexto
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>O básico do HTTP</li>
+	<li>O HTTP e o TCP</li>
+	<li>A requisição do HTTP do navegador</li>
+	<li>O HTTP/2</li>
       </ol>
     </li>
 
-    <li>Quinto capítulo
+    <li>Capítulo 5 – HTTPS e sua segurança
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>O HTTPS</li>
+	<li>O que é o TLS</li>
+	<li>O handshake do TLS</li>
+	<li>Testando uma conexão HTTPS manualmente</li>
+	<li>O que fica seguro?</li>
       </ol>
     </li>
 
-    <li>Sexto capítulo
+    <li>Capítulo 6 – Para a internet e além
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>Ethernet ou Wi-Fi</li>
+	<li>Saindo do sistema operacional</li>
+	<li>Rumo ao roteador</li>
+	<li>A segurança do Wi-Fi</li>
+	<li>Saindo para a internet</li>
       </ol>
     </li>
 
-    <li>Sétimo capítulo
+    <li>Capítulo 7 – Servidor web
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>O servidor físico</li>
+	<li>O software</li>
+	<li>NGINX</li>
+	<li>Phusion Passenger, o servidor de aplicação</li>
       </ol>
     </li>
 
-    <li>Oitavo capítulo
+    <li>Capítulo 8 – O framework e a aplicação
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>Conhecendo o Rack</li>
+	<li>Do Passenger ao Rack</li>
+	<li>O Ruby on Rails</li>
+	<li>O retorno para o navegador</li>
       </ol>
     </li>
 
-    <li>Nono capítulo
+    <li>Capítulo 9 – De volta ao navegador
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>O recebimento dos dados</li>
+	<li>A rendering engine</li>
+	<li>Parse de HTML</li>
+	<li>Parse de CSS</li>
+	<li>Carregando arquivos externos</li>
+	<li>Construção da Render Tree</li>
+	<li>Layout da Render Tree</li>
+	<li>Painting</li>
+	<li>Tudo pronto, em menos de um segundo!</li>
       </ol>
     </li>
 
-    <li>Décimo capítulo
+    <li>Capítulo 10 – Além dessa requisição web
       <ol>
-	<li>Primeiro subtítulo</li>
-	<li>Segundo subtítulo</li>
-	<li>Terceiro subtítulo</li>
-	<li>Quarto subtítulo</li>
+	<li>Outras tecnologias</li>
+	<li>Discussão e aprendizado</li>
+	<li>Considerações finais</li>
       </ol>
     </li>
-
-    <li>Conclusão</li>
-    <li>Continuando os estudos</a></li>
-    <li>Referências</a></li>
-    <li>Índice Remissivo</li>
   </ol>
 
   <div class=compreja>
-    <a class="nicebutton" href="#">Comprar o livro</a>
+    <a class="nicebutton" href="https://casadocodigo.com.br">Comprar o livro</a>
   </div>
 </section>
 <div id=tectura>
@@ -182,14 +175,11 @@ uma requisição vai chegar em uma aplicação web, passando pelo servidor web e
   <div class=autor>
     <h2>Willian Molinari<br><strong>PotHix</strong></h2>
     <img src="//www.gravatar.com/avatar/2f09c56a60d46c8ad42fc646af73a6bb?s=90" alt="Foto de Willian Molinari, também conhecido como PotHix">
-    <p>Começou a trabalhar profissionalmento com desenvolvimento de software em 2006 e desde então tem trabalhado com diversas linguagens de programação.
-      É entusiasta de tecnologias Open Source e sempre que possível contribui para algum projeto. No tempo livre, entre outras coisas, faz jogos com Javascript
-    e HTML5. É palestrante, tendo palestrado em mais de 6 estados do Brasil, em conferências nacionais e internacionais.</p>
+    <p>Willian Molinari, mais conhecido como PotHix, é formado em Sistemas de informação e trabalha com desenvolvimento de software há mais de 10 anos. É um dos fundadores do Guru-SP, ajudando na organização do grupo desde 2008. No seu tempo livre, ele desenvolveu alguns jogos com HTML5 e Javascript, sendo o <a href="http://plaev.github.io/skeleton-jigsaw">Skeleton Jigsaw</a> o último deles. Já fez dezenas de palestras, passando por mais de 7 estados brasileiros e foi revisor técnico de dois livros. Mais informações podem ser encontradas no seu <a href="http://pothix.com">blog pessoal</a>.</p>
   </div>
 
   <div id=falecom>
     <p>Fale com o autor: <a href="mailto:pothix@pothix.com">pothix@pothix.com</a></p>
-    <p>Professor, quer usar o livro em sala de aula? Entre em contato.</p>
   </div>
 </section>
 
@@ -197,21 +187,16 @@ uma requisição vai chegar em uma aplicação web, passando pelo servidor web e
   <div class=container>
     <hgroup>
       <h1>Desconstruindo a web</h1>
-      <h2>Conheça a fundo como funciona uma requisição web</h2>
+      <h2>As tecnologias por trás de uma requisição</h2>
     </hgroup>
 
     <ul>
       <li><a href="http://www.casadocodigo.com.br/#">Comprar o livro</a></li>
       <li><a href="http://pothix.com">Site do autor</a></li>
 
-
-      <li><a href="mailto:pothix@pothix.com">Fale com o autor</a></li>
-
       <li><a href="#conteudo">Conteúdo</a></li>
       <li><a href="#publico">Para quem é o livro</a></li>
       <li><a href="#autores">Sobre o autor</a></li>
-
-      <li><a id="versao" href="#">Forçar Site Desktop</a></li>
     </ul>
 
     <div id=logos>

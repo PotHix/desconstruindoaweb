@@ -39,37 +39,6 @@ function loadAsync(url) {
 	}
 })();
 
-// oferece opcao Desktop vs. Mobile
-(function() {
-	var link = document.getElementById('versao');
-
-	if (!('querySelector' in document)) {
-		link.remove();
-		return;
-	}
-
-	var viewport = document.querySelector('meta[name=viewport]');
-	var initialViewportValue = viewport.content;
-
-	window.responsive = true;
-
-	link.onclick = function() {
-		if (window.responsive) {
-			// nao esta forcado Desktop, forçar
-			viewport.content = 'width=1000,initial-scale=0.25,minimum-scale=0.25,maximum-scale=10'
-			link.innerText = 'Usar site responsivo (mobile)';
-			window.responsive = false;
-		} else {
-			// esta forcado Desktop, forçar
-			viewport.content = initialViewportValue;
-			link.innerText = 'Forçar Site Desktop';
-			window.responsive = true;
-		}
-
-		return false;
-	};
-})();
-
 /*! A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT License.
 	https://github.com/scottjehl/iOS-Orientationchange-Fix
 */

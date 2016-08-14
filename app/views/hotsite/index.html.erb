@@ -66,8 +66,8 @@
 	<li>O navegador de estudo</li>
 	<li>Entendendo o conteúdo da barra de endereços</li>
 	<li>Escolhendo o protocolo</li>
-	<li>O caminho até a rede no Chromium</li>
-	<li>O navegador possui cache dessa URL?</li>
+	<li>O caminho até a rede</li>
+	<li>O cache da URL</li>
 	<li>O navegador e a resolução de nomes</li>
       </ol>
     </li>
@@ -76,8 +76,9 @@
       <ol>
 	<li>Definindo o sistema operacional</li>
 	<li>A glibc e as chamadas de sistema</li>
-	<li>Como a função getaddrinfo resolve nomes</li>
+	<li>A função que resolve nomes</li>
 	<li>O protocolo IP e suas versões</li>
+	<li>Happy eyeballs</li>
       </ol>
     </li>
 
@@ -85,7 +86,7 @@
       <ol>
 	<li>O modelo Ozzy</li>
 	<li>O protocolo DNS</li>
-	<li>DNS e o UDP</li>
+	<li>DNS e o UDP/IP</li>
 	<li>Os sockets</li>
 	<li>O que o DNS faz para obter o que precisa</li>
       </ol>
@@ -95,7 +96,8 @@
       <ol>
 	<li>O básico do HTTP</li>
 	<li>O HTTP e o TCP</li>
-	<li>A requisição do HTTP do navegador</li>
+	<li>O three-way handshake do TCP</li>
+	<li>A requisição HTTP do navegador</li>
 	<li>O HTTP/2</li>
       </ol>
     </li>
@@ -104,7 +106,18 @@
       <ol>
 	<li>O HTTPS</li>
 	<li>O que é o TLS</li>
-	<li>O handshake do TLS</li>
+	<li>O handshake do TLS
+          <ol>
+            <li>Client Hello</li>
+            <li>Server Hello</li>
+            <li>O certificado e a chave pública</li>
+            <li>Garantindo a confiança do certificado</li>
+            <li>Validando o certificado</li>
+            <li>Entendendo o cipher</li>
+            <li>A troca de chaves</li>
+            <li>Fazendo a criptografia acontecer</li>
+          </ol>
+        </li>
 	<li>Testando uma conexão HTTPS manualmente</li>
 	<li>O que fica seguro?</li>
       </ol>
@@ -114,7 +127,7 @@
       <ol>
 	<li>Ethernet ou Wi-Fi</li>
 	<li>Saindo do sistema operacional</li>
-	<li>Rumo ao roteador</li>
+	<li>O caminho para o roteador</li>
 	<li>A segurança do Wi-Fi</li>
 	<li>Saindo para a internet</li>
       </ol>
@@ -124,8 +137,20 @@
       <ol>
 	<li>O servidor físico</li>
 	<li>O software</li>
-	<li>NGINX</li>
-	<li>Phusion Passenger, o servidor de aplicação</li>
+	<li>NGINX
+          <ol>
+            <li>A arquitetura do NGINX</li>
+            <li>O event loop</li>
+            <li>Recebendo a requisição do cliente</li>
+          </ol>
+        </li>
+	<li>Phusion Passenger, o servidor de aplicação
+          <ol>
+            <li>Configuração</li>
+            <li>Arquitetura</li>
+            <li>Recebendo a requisição do NGINX</li>
+          </ol>
+        </li>
       </ol>
     </li>
 
@@ -133,7 +158,16 @@
       <ol>
 	<li>Conhecendo o Rack</li>
 	<li>Do Passenger ao Rack</li>
-	<li>O Ruby on Rails</li>
+	<li>O Ruby on Rails
+          <ol>
+            <li>A conexão do Rails com o Rack</li>
+            <li>Os middlewares</li>
+            <li>Chegando nas rotas</li>
+            <li>Chegando ao controller</li>
+            <li>A renderização da view</li>
+          </ol>
+        </li>
+	<li>A aplicação</li>
 	<li>O retorno para o navegador</li>
       </ol>
     </li>
